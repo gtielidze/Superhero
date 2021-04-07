@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="29dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backButton"
+        style="@style/backButton"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="@+id/gdStart"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        app:layout_constraintStart_toEndOf= "@+id/registrationActivityName"
+        app:srcCompat="@drawable/ic_round_arrow_back"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/backButtonText"
+        style="@style/backButtonText"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        android:text="@string/back_button"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        tools:layout_editor_absoluteY="42dp" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/registrationActivityName"
+        style="@style/username"
+        android:layout_width="348dp"
+        android:layout_height="54dp"
+        android:hint="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/userNameInput"
+        app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+        app:layout_constraintStart_toStartOf="@+id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userNameInput"
+        style="@style/username"
+        android:layout_width="352dp"
+        android:layout_height="55dp"
+        android:hint="@string/username_login_screen"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+        app:layout_constraintStart_toStartOf="@+id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/registrationActivityName" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="352dp"
+        android:layout_height="55dp"
+        android:hint="@string/password_hint"
+        android:textColorHint="@color/black"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/repeat"
+        app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+        app:layout_constraintStart_toStartOf="@+id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/userNameInput">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/passwordInput"
+            style="@style/passwordChild" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/repeat"
+        android:layout_width="352dp"
+        android:layout_height="55dp"
+        android:hint="@string/repeat_password"
+        android:textColorHint="@color/black"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+        app:layout_constraintStart_toStartOf="@+id/gdStart"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/signUpBtn">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/registrationScreenRepeatPassword"
+            style="@style/passwordChild" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpBtn"
+        style="@style/SignUpButton"
+        android:text="@string/sign_up"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+        app:layout_constraintStart_toStartOf="@+id/gdStart"
+        app:layout_constraintBottom_toTopOf="@+id/gdBottom"
+        app:layout_constraintTop_toBottomOf="@id/repeat"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="340dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

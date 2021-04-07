@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="SignUpButton_width">352dp</dimen>
+    <dimen name="SignUpButton_height">45dp</dimen>
+    <dimen name="LoginButton_width">327dp</dimen>
+    <dimen name="LoginButton_height">45dp</dimen>
+    <dimen name="loading_pb_dimen">44dp</dimen>
+    <dimen name="card_list_hor_inst">19dp</dimen>
+    <dimen name="card_list_vrt_space">8dp</dimen>
+    <dimen name="card_list_hor_space">8dp</dimen>
+    <dimen name="card_list_ver_inst">80dp</dimen>
+
+
+    <dimen name="favorite_card_list_hor_inst">5dp</dimen>
+    <dimen name="favorite_card_list_vrt_space">5dp</dimen>
+    <dimen name="favorite_card_list_hor_space">5dp</dimen>
+    <dimen name="favorite_card_list_ver_inst">5dp</dimen>
+</resources>

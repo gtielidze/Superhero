@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#625671</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--აპლიკაციის ფერები-->
+    <color name="black_900">#000000</color>
+    <color name="salmon">#FE5F5F</color>
+    <color name="blue_200">#395AFF</color>
+    <color name="yellow_300">#FFD500</color>
+    <color name="red_200">#FE0000</color>
+    <color name="gray_500">#9F9F9F</color>
+    <color name="gray_100">#E9E9E9</color>
+    <color name="gray_800">#707070</color>
+
+</resources>

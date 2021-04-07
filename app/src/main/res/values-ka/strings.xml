@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">სუპერგმირი</string>
+    <string name="log_in">შესვლა</string>
+    <string name="sign_up_login_screen">გამოსვლა</string>
+    <string name="password_hint">პაროლი</string>
+    <string name="username_login_screen">მომხმარებლის სახელი</string>
+    <string name="back_button">back</string>
+    <string name="nameHint">სახელი</string>
+    <string name="repeat_password_hint">გაიმეორეთ პაროლი</string>
+    <string name="log_out">გამოსვლა</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_profile">Profile</string>
+    <string name="cardNameFromDetails">CardName</string>
+    <string name="hint_search">search</string>
+    <string name="sign_up">რეგისტრაცია</string>
+    <string name="repeat_password">გაიმეორეთ პაროლი</string>
+    <string name="name">სახელი</string>
+</resources>

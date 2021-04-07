@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SignUpButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_solid_background</item>
+        <item name="android:layout_width">@dimen/SignUpButton_width</item>
+        <item name="android:layout_height">@dimen/SignUpButton_height</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="LoginButton" >
+        <item name="android:background">@drawable/button_solid_background</item>
+        <item name="android:layout_width">@dimen/LoginButton_width</item>
+        <item name="android:layout_height">@dimen/LoginButton_height</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="backButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="backButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="username" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="signUp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/gray_500</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="passwordChild">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="superhero_name" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="Text.Tab" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="Text.Tab.Inactive">
+        <item name="android:textColor">@color/gray_500</item>
+    </style>
+
+
+    <style name="Text.Tab.Active">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="circleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textAppearanceButton">@style/myButton.text</item>
+    </style>
+
+    <style name="myButton.text" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="logOutButton">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="PowerStatsText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="power">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="apperance">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginStart">7dp</item>
+    </style>
+
+    <style name="description">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="baseStyle">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+
+
+
+
+</resources>

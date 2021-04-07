@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="com.example.superhero.ui.navHome.NavHomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.superhero.ui.registration.RegistrationFragment"
+        android:label="RegistrationFragment" />
+
+    <fragment
+        android:id="@+id/cardDetailsFragment"
+        android:name="com.example.superhero.ui.cardDetails.CardDetailsFragment"
+        android:label="CardDEtailsFragmen">
+        <argument
+            android:name="data"
+            app:argType="com.example.superhero.data.models.superhero.SuperheroCard" />
+    </fragment>
+
+    <action
+        android:id="@+id/login"
+        app:destination="@+id/loginFragment"
+        app:enterAnim="@anim/slide_in_bottom"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_bottom" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.superhero.ui.login.LoginFragment"
+        android:label="LoginFragment">
+
+        <action
+            android:id="@+id/form_login_to_registration"
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <action
+
+        android:id="@+id/action_global_cardDetailsFragment"
+        app:destination="@id/cardDetailsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <include app:graph="@navigation/home_nav_graph" />
+
+
+</navigation>

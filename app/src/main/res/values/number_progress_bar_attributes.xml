@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberedProgressBar">
+        <attr name="npb_textSize" format="dimension" />
+        <attr name="android:fontFamily" format="reference" />
+        <attr name="npb_color" format="color" />
+    </declare-styleable>
+</resources>

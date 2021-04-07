@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backButtonDetailCard"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_round_arrow_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/backButtonText"
+        style="@style/backButtonText"
+        android:text="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="@+id/backButtonDetailCard"
+        app:layout_constraintStart_toEndOf="@+id/backButtonDetailCard"
+        app:layout_constraintTop_toTopOf="@+id/backButtonDetailCard" />
+
+    <ScrollView
+        android:id="@+id/justScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="20dp" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="420dp" />
+
+
+            <ImageView
+                android:id="@+id/heroImg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/gdBottom"
+                app:layout_constraintDimensionRatio="W,310:412"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/heroName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/cardNameFromDetails"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="@+id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/heroImg" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gdAfterHeroName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="540dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fullNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/gdAfterHeroName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/aliasesTxt"
+                style="@style/baseStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/fullNameTxt" />
+
+
+            <!--            <androidx.constraintlayout.widget.Barrier-->
+            <!--                android:id="@+id/justBarrier"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:barrierDirection="bottom" />-->
+
+            <TextView
+                android:id="@+id/favoritesTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="25dp"
+                android:text="@string/favorites"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/powerStats"
+                app:layout_constraintStart_toStartOf="@+id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/aliasesTxt" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addRemoveBtn"
+                android:layout_width="72.61dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/detail_card_button_background"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/favoritesTxt"
+                app:layout_constraintTop_toBottomOf="@+id/aliasesTxt" />
+
+            <TextView
+                android:id="@+id/powerStats"
+                style="@style/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/power_stats"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalScr"
+                app:layout_constraintStart_toStartOf="@+id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/favoritesTxt" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/gdEnd"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/powerStats">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/insideScroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/combatTxt"
+                        style="@style/PowerStatsText"
+                        android:layout_width="85dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/combat"
+                        app:layout_constraintBottom_toTopOf="@+id/combatPrb"
+                        app:layout_constraintEnd_toStartOf="@+id/durabilityTxt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/durabilityTxt"
+                        style="@style/PowerStatsText"
+                        android:layout_width="85dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/durability"
+                        app:layout_constraintBottom_toTopOf="@+id/durabilityPrb"
+                        app:layout_constraintEnd_toStartOf="@+id/intelligenceTxt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/combatTxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/intelligenceTxt"
+                        style="@style/PowerStatsText"
+                        android:layout_width="85dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/intelligence"
+                        app:layout_constraintBottom_toTopOf="@+id/intelligencePrb"
+                        app:layout_constraintEnd_toStartOf="@+id/powerTxt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/durabilityTxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/powerTxt"
+                        style="@style/PowerStatsText"
+                        android:layout_width="85dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/power"
+                        app:layout_constraintBottom_toTopOf="@+id/powerPrb"
+                        app:layout_constraintEnd_toStartOf="@+id/speedTxt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/intelligenceTxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/speedTxt"
+                        style="@style/PowerStatsText"
+                        android:layout_width="85dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/speed"
+                        app:layout_constraintBottom_toTopOf="@+id/speedPrb"
+                        app:layout_constraintEnd_toStartOf="@+id/strengthTxt"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/powerTxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/strengthTxt"
+                        style="@style/PowerStatsText"
+                        android:layout_width="85dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/strength"
+                        app:layout_constraintBottom_toTopOf="@+id/strengthPrb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/speedTxt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/combatPrb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/prg_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/combatTxt"
+                        app:layout_constraintStart_toStartOf="@+id/combatTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/combatTxt" />
+
+                    <TextView
+                        android:id="@+id/combatProgressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/combatPrb"
+                        app:layout_constraintStart_toStartOf="@+id/combatPrb"
+                        app:layout_constraintTop_toBottomOf="@+id/combatPrb"
+                        tools:text="50%" />
+
+                    <ProgressBar
+                        android:id="@+id/durabilityPrb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/prg_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/durabilityTxt"
+                        app:layout_constraintStart_toEndOf="@+id/durabilityTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/durabilityTxt" />
+
+                    <TextView
+                        android:id="@+id/durabilityProgressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/durabilityPrb"
+                        app:layout_constraintStart_toStartOf="@+id/durabilityPrb"
+                        app:layout_constraintTop_toBottomOf="@+id/durabilityPrb"
+                        tools:text="50%" />
+
+                    <ProgressBar
+                        android:id="@+id/intelligencePrb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/prg_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/intelligenceTxt"
+                        app:layout_constraintStart_toEndOf="@+id/intelligenceTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/intelligenceTxt" />
+
+                    <TextView
+                        android:id="@+id/intelligenceProgressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/intelligencePrb"
+                        app:layout_constraintStart_toStartOf="@+id/intelligencePrb"
+                        app:layout_constraintTop_toBottomOf="@+id/intelligencePrb"
+                        tools:text="50%" />
+
+                    <ProgressBar
+                        android:id="@+id/powerPrb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/prg_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/powerTxt"
+                        app:layout_constraintStart_toEndOf="@+id/powerTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/powerTxt" />
+
+                    <TextView
+                        android:id="@+id/powerProgressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/powerPrb"
+                        app:layout_constraintStart_toStartOf="@+id/powerPrb"
+                        app:layout_constraintTop_toBottomOf="@+id/powerPrb"
+                        tools:text="50%" />
+
+                    <ProgressBar
+                        android:id="@+id/speedPrb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/prg_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/speedTxt"
+                        app:layout_constraintStart_toEndOf="@+id/speedTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/speedTxt" />
+
+                    <TextView
+                        android:id="@+id/speedProgressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/speedPrb"
+                        app:layout_constraintStart_toStartOf="@+id/speedPrb"
+                        app:layout_constraintTop_toBottomOf="@+id/speedPrb"
+                        tools:text="50%" />
+
+
+                    <ProgressBar
+                        android:id="@+id/strengthPrb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/prg_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/strengthTxt"
+                        app:layout_constraintStart_toEndOf="@+id/strengthTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/strengthTxt" />
+
+                    <TextView
+                        android:id="@+id/strengthProgressTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/strengthPrb"
+                        app:layout_constraintStart_toStartOf="@+id/strengthPrb"
+                        app:layout_constraintTop_toBottomOf="@+id/strengthPrb"
+                        tools:text="50%" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/apperanceTxt"
+                style="@style/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/apperance"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/horizontalScr" />
+
+            <TextView
+                android:id="@+id/eyeColorTxt"
+                style="@style/apperance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eye_color"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/apperanceTxt" />
+
+            <TextView
+                android:id="@+id/genderTxt"
+                style="@style/apperance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/eyeColorTxt" />
+
+            <TextView
+                android:id="@+id/hairColorTxt"
+                style="@style/apperance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hair_color"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/genderTxt" />
+
+            <TextView
+                android:id="@+id/heightTxt"
+                style="@style/apperance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/hairColorTxt" />
+
+            <TextView
+                android:id="@+id/weightTxt"
+                style="@style/apperance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/heightTxt" />
+
+            <TextView
+                android:id="@+id/raceTxt"
+                style="@style/apperance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/race"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@id/weightTxt" />
+
+            <TextView
+                android:id="@+id/eyeColor"
+                style="@style/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScr"
+                tools:text="eye color" />
+
+            <TextView
+                android:id="@+id/gender"
+                style="@style/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintTop_toBottomOf="@+id/eyeColor"
+                tools:text="gender" />
+
+            <TextView
+                android:id="@+id/hairColor"
+                style="@style/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/gender"
+                tools:text="hair color" />
+
+            <TextView
+                android:id="@+id/height"
+                style="@style/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/hairColor"
+                tools:text="Height" />
+
+            <TextView
+                android:id="@+id/weight"
+                style="@style/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/height"
+                tools:text="Weight" />
+
+
+            <TextView
+                android:id="@+id/race"
+                style="@style/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/gdEnd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/weight"
+                tools:text="Race" />
+
+            <TextView
+                android:id="@+id/titleBase"
+                style="@style/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/base"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/raceTxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/baseTxt"
+                style="@style/baseStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/titleBase" />
+
+            <TextView
+                android:id="@+id/titleOccupation"
+                style="@style/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/occupation"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/baseTxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/occupationTxt"
+                style="@style/baseStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/titleOccupation" />
+
+            <TextView
+                android:id="@+id/titleConnections"
+                style="@style/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/connections"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/occupationTxt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/groupAffiliationTxt"
+                style="@style/baseStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/titleConnections" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/relativesTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/gdStart"
+                app:layout_constraintTop_toBottomOf="@+id/groupAffiliationTxt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

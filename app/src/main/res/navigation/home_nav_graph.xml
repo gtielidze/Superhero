@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.superhero.ui.search.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.superhero.ui.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.superhero.ui.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/savedCardsFragment"
+        android:name="com.example.superhero.ui.savedCards.SavedCardsFragment"
+        android:label="SavedCardFragment" />
+    <action
+        android:id="@+id/show_home"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/home_nav_graph" />
+    <action
+        android:id="@+id/show_profile"
+        app:destination="@id/profileFragment"
+        app:popUpTo="@id/home_nav_graph" />
+    <action
+        android:id="@+id/show_search"
+        app:destination="@id/searchFragment"
+        app:popUpTo="@id/home_nav_graph" />
+    <action
+        android:id="@+id/show_saved_cards"
+        app:destination="@id/savedCardsFragment"
+        app:popUpTo="@id/home_nav_graph" />
+
+</navigation>
